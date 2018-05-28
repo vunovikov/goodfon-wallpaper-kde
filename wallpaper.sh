@@ -43,3 +43,14 @@ grep "<a href=\"/download/" |\
 cut -d '"' -f 2 |\
 head -n1`
 echo $url$image_orig_res | xargs curl -sL | grep "a href=.https://img4.goodfon.ru" | cut -d '"' -f 2 | xargs curl -O
+
+#dbus-send --session --dest=org.kde.plasmashell --type=method_call /PlasmaShell org.kde.PlasmaShell.evaluateScript 'string:
+#var Desktops = desktops();                                                                                                                       
+#for (i=0;i<Desktops.length;i++) {
+#        d = Desktops[i];
+#        d.wallpaperPlugin = "org.kde.image";
+#        d.currentConfigGroup = Array("Wallpaper",
+#                                   "org.kde.image",
+#                                    "General");
+#        d.writeConfig("Image", "file:///PATH/TO/IMAGE.png");
+#}'
